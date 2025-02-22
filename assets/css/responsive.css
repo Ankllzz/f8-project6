@@ -114,6 +114,10 @@
         line-height: 2.6rem;
     }
 
+    .service__list {
+        overflow: hidden;
+    }
+
     .work__inner {
         padding-left: 15px;
         padding-right: 15px;
@@ -291,6 +295,10 @@
         border: 1.5px solid #161a1c;
     }
 
+    .faq__question-wrap {
+        width: calc(100% - 33px);
+    }
+
     .gallery__heading {
         font-size: 3.6rem;
         line-height: 4.2rem;
@@ -404,8 +412,6 @@
 /* Mobile */
 @media screen and (max-width: 767.98px) {
     .header {
-        margin-left: 7px;
-        margin-right: 7px;
         border-bottom: 1px solid #d6d3e2;
     }
 

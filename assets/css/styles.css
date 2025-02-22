@@ -64,8 +64,12 @@ img {
 }
 /* Header */
 .header {
+    position: sticky;
+    top: -20px;
+    left: 0;
     padding: 40px 0 20px;
     background: #fbfaff;
+    z-index: 99;
 }
 
 .header__inner {
@@ -187,6 +191,7 @@ img {
     inset: 30% auto auto -47%;
     width: 900px;
     rotate: 127deg;
+    z-index: 1;
 }
 
 .decor {
@@ -389,12 +394,17 @@ img {
 .service__list {
     margin-top: 60px;
     flex-wrap: nowrap;
-    overflow: hidden;
 }
 
 .service__item {
     padding: 33px 42px 32px 43px;
     background: #fbfaff;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.service__item:hover {
+    box-shadow: 2px 0px 13px 4px rgba(0, 0, 0, 0.3);
 }
 
 .service__icon-wrap {
@@ -435,6 +445,7 @@ img {
     height: 16px;
     border-radius: 16px;
     background: rgba(8, 4, 21, 0.2);
+    cursor: pointer;
 }
 
 .active {
@@ -634,6 +645,10 @@ img {
     text-decoration: underline;
 }
 
+.about__label {
+    margin-top: 10px;
+}
+
 .about__img-wrap {
     position: absolute;
     top: 440px;
@@ -824,6 +839,7 @@ img {
 }
 
 .faq__icon {
+    flex-shrink: 0;
     position: relative;
     display: block;
     width: 50px;
@@ -873,6 +889,10 @@ img {
     visibility: visible;
 }
 
+.faq__item:has(:checked) .faq__icon {
+    border-color: rgba(93, 59, 238, 0.2);
+}
+
 /* Gallery */
 .gallery {
     margin-top: 160px;
@@ -908,6 +928,8 @@ img {
 
 .gallery__media {
     margin-top: 70px;
+    flex-wrap: nowrap;
+    overflow: hidden;
 }
 
 .gallery__img {
@@ -931,21 +953,27 @@ img {
 }
 
 .cta__heading {
+    position: relative;
     color: var(--color-heading);
     font-size: 5.6rem;
     font-weight: 500;
     line-height: 6.6rem; /* 117.857% */
     letter-spacing: -2.24px;
+    z-index: 2;
 }
 
 .cta__desc {
+    position: relative;
     margin: 20px auto 0;
     width: 570px;
+    z-index: 2;
 }
 
 .cta__btn {
+    position: relative;
     margin-top: 40px;
     display: inline-block;
+    z-index: 2;
 }
 
 .cta__decorators {
@@ -1050,7 +1078,7 @@ img {
 .copyright,
 .privacy,
 .terms {
-    color: var(--color-desc);
+    color: #525771;
     font-size: 1.8rem;
     font-style: normal;
     font-weight: 400;
@@ -1076,4 +1104,8 @@ img {
     height: 1px;
     background: rgba(82, 87, 113, 0.6);
     rotate: 90deg;
+}
+
+.footer .nav-item a {
+    color: #51586a;
 }
